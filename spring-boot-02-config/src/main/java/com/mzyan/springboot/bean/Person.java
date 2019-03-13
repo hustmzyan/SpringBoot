@@ -1,8 +1,12 @@
 package com.mzyan.springboot.bean;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
+import org.springframework.validation.annotation.Validated;
 
+import javax.validation.constraints.Email;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -11,16 +15,34 @@ import java.util.Map;
 /**
  * 将配置文件中配置的每一个属性的值，映射到这个组件中
  * @ConfigurationProperties：告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定
- *
+ * 支持批量注入
  * prefix = "person" 配置文件哪个下面的所有属性进行一一映射
  *
  * 只有这个组件是容器中的组件，才能使用容器提供的@ConfigurationProperties功能
+ *
+ * @ConfigurationProperties：默认从全局配置文件中获取值
+ *
  */
+//选择读取指定配置文件
+//@PropertySource(value={"classpath:person.properties"})
+
 @Component
 @ConfigurationProperties(prefix = "person")
+//@Validated
 public class Person {
+    /**
+     * XML配置方式：
+     * <bean class="Person">
+     *     <property name=""last_Name" value="字面量/${key}从环境变量、配置文件中获取值/#{SpEL}"></property>
+     * </bean>
+     */
+//    @Value("${person.last-name}")
+//  lastName必须填成邮箱格式
+//    @Email
     private String lastName;
+//    @Value("#{12*2}")
     private Integer age;
+//    @Value("true")
     private Boolean boss;
     private Date birth;
 

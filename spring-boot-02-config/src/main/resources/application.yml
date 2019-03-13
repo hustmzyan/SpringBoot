@@ -1,15 +1,41 @@
 server:
   port: 8081
+spring:
+  profiles:
+    active: prod
+---
 
-person:
-  age: 24
-  boss: true
-  birth: 1995/12/02
-  maps: {k1: v1, k2: 12}
-  lists:
-    - xy
-    - zm
-  dog:
-    name: 小狗
-    age: 2
-  last-name: mzyan
+server:
+  port: 8082
+spring:
+  profiles: dev
+
+
+---
+
+server:
+  port: 8083
+spring:
+  profiles: prod
+
+
+
+
+
+
+
+
+
+
+#person:
+#  age: 24
+#  boss: true
+#  birth: 1995/12/02
+#  maps: {k1: v1, k2: 12}
+#  lists:
+#    - xy
+#    - zm
+#  dog:
+#    name: 小狗
+#    age: 2
+#  last-name: mzyan
