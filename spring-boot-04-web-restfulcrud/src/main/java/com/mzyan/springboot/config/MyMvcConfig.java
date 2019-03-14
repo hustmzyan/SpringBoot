@@ -1,5 +1,6 @@
 package com.mzyan.springboot.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
@@ -18,18 +19,18 @@ public class MyMvcConfig implements WebMvcConfigurer {
         //super.addViewControllers(registry);
         //作用：浏览器发送"/mzyan"请求，也来到success页面
         registry.addViewController("/mzyan").setViewName("success");
-//        registry.addViewController("/").setViewName("index");
     }
 
-//    // 所有 WebMvcConfigurer 组件都会一起起作用
-//    public WebMvcConfigurer webMvcConfigurer(){
-//        WebMvcConfigurer webMvcConfigurer = new WebMvcConfigurer() {
-//            @Override
-//            public void addViewControllers(ViewControllerRegistry registry) {
-//                registry.addViewController("/").setViewName("index");
-//                registry.addViewController("/index.html").setViewName("index");
-//            }
-//        };
-//        return webMvcConfigurer;
-//    }
+    // 所有 WebMvcConfigurer 组件都会一起起作用
+    @Bean//将组件注册在容器中
+    public WebMvcConfigurer webMvcConfigurer(){
+        WebMvcConfigurer webMvcConfigurer = new WebMvcConfigurer() {
+            @Override
+            public void addViewControllers(ViewControllerRegistry registry) {
+                registry.addViewController("/").setViewName("login");
+                registry.addViewController("/login.html").setViewName("login");
+            }
+        };
+        return webMvcConfigurer;
+    }
 }
