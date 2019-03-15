@@ -1,11 +1,11 @@
 package com.mzyan.springboot.config;
 
+import com.mzyan.springboot.component.MyLocaleResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
  * 使用 WebMvcConfigurerAdapter 来扩展 SpringMVC 的功能
@@ -28,9 +28,14 @@ public class MyMvcConfig implements WebMvcConfigurer {
             @Override
             public void addViewControllers(ViewControllerRegistry registry) {
                 registry.addViewController("/").setViewName("login");
-                registry.addViewController("/login.html").setViewName("login");
+                registry.addViewController("/index.html").setViewName("login");
             }
         };
         return webMvcConfigurer;
+    }
+
+    @Bean
+    public LocaleResolver localeResolver(){
+        return new MyLocaleResolver();
     }
 }
