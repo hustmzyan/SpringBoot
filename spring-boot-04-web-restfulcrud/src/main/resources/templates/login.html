@@ -7,8 +7,8 @@
         <meta name="description" content="">
         <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
         <meta name="generator" content="Jekyll v3.8.5">
-        <title>Signin Template · Bootstrap</title>
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
+        <title>Login</title>
+        <link rel="canonical" href="#" th:href="@{/index.html}">
 
         <!-- Bootstrap core CSS -->
         <link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -31,13 +31,15 @@
         <link href="asserts/css/signin.css" th:href="@{/asserts/css/signin.css}" rel="stylesheet">
     </head>
     <body class="text-center">
-        <form class="form-signin">
+        <form class="form-signin" action="dashboard.html" th:action="@{/user/login}" method="post">
             <img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" src="asserts/img/bootstrap-solid.svg" alt="" width="72" height="72">
             <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
+            <!--判断msg是否不为空-->
+            <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
             <label for="inputEmail" class="sr-only" th:text="#{login.username}">UserName</label>
-            <input type="email" id="inputEmail" class="form-control" placeholder="UserName" th:placeholder="#{login.username}" required="" autofocus="">
+            <input type="email" name="username" id="inputEmail" class="form-control" placeholder="UserName" th:placeholder="#{login.username}" required="" autofocus="">
             <label for="inputPassword" class="sr-only" th:text="#{login.password}">Password</label>
-            <input type="password" id="inputPassword" class="form-control" placeholder="Password" th:placeholder="#{login.password}" required="">
+            <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" th:placeholder="#{login.password}" required="">
             <div class="checkbox mb-3">
                 <label>
                     <input type="checkbox" value="remember-me"/> [[#{login.remember}]]
