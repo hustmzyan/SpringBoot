@@ -16,6 +16,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 //@EnableWebMvc
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
+
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         //super.addViewControllers(registry);
@@ -28,8 +29,8 @@ public class MyMvcConfig implements WebMvcConfigurer {
     public void addInterceptors(InterceptorRegistry registry) {
         //静态资源： *.css  *.js
         //SpringBoot已经做好了静态资源映射
-        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
-                .excludePathPatterns("/index.html", "/", "/user/login");
+//        registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**")
+//                .excludePathPatterns("/index.html", "/", "/user/login");
     }
 
     // 所有 WebMvcConfigurer 组件都会一起起作用

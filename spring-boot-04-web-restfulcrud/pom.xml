@@ -35,6 +35,12 @@
             <scope>test</scope>
         </dependency>
 
+        <!--引入其他servlet容器-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-jetty</artifactId>-->
+        <!--</dependency>-->
+
         <!--以jar包形式引入静态资源-->
         <!--引入jquery-webjar-->
         <dependency>

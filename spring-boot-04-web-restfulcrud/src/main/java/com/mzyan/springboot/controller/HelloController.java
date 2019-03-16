@@ -1,7 +1,10 @@
 package com.mzyan.springboot.controller;
 
+import com.mzyan.springboot.exception.UserNotExistException;
+import com.sun.tools.internal.xjc.reader.xmlschema.bindinfo.BIConversion;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Arrays;
@@ -17,7 +20,10 @@ public class HelloController {
 
     @ResponseBody
     @RequestMapping("/hello")
-    public String hello(){
+    public String hello(@RequestParam("user") String user){
+        if(user.equals("aaa")){
+            throw new UserNotExistException();
+        }
         return "hello";
     }
 
