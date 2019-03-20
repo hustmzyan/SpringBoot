@@ -3,10 +3,11 @@ package com.mzyan.springboot.service;
 import com.mzyan.springboot.bean.Employee;
 import com.mzyan.springboot.mapper.EmployeeMapper;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 
+// 抽取缓存的公共配置
+@CacheConfig(cacheNames = "emp")
 @Service
 public class EmployeeService {
 
@@ -58,5 +59,34 @@ public class EmployeeService {
         System.out.println("updateEmp:"+employee);
         employeeMapper.updateEmp(employee);
         return employee;
+    }
+
+    /**
+     * @CacheEvict 缓存清除
+     *      allEntries=true 属性  为清空所有缓存
+     *      beforeInvocation=false 缓存的清除是否在方法之前执行
+     *          默认代表缓存清除操作在方法执行之后执行，如果出现异常缓存就不会清除
+     *      beforeInvocation=true 代表清除缓存操作是在方法运行之前执行，无论方法是否出现异常，缓存都清除
+     * @param id
+     */
+    @CacheEvict(value = "emp",/* key = "#id",*/ allEntries = true)
+    public void deleteemp(Integer id){
+        System.out.println("deleteEmp:"+id);
+//        employeeMapper.deleteEmp(id);
+    }
+
+//    @Caching 定义复杂的缓存规则
+    @Caching(
+            cacheable = {
+                    @Cacheable(value = "emp", key = "#lastName")
+            },
+            put = {
+                    @CachePut(value = "emp", key = "#result.id"),
+                    @CachePut(value = "emp", key = "#result.email")
+            }
+    )
+    public Employee getEmpByLastName(String lastName) {
+        System.out.println("getEmpByLastName"+lastName);
+        return employeeMapper.getEmpByLastName(lastName);
     }
 }
