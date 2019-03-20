@@ -3,6 +3,7 @@ spring:
     username: root
     password: 123456
     url: jdbc:mysql://192.168.174.129:3306/mybatis
+#    url: jdbc:mysql://localhost:3306/spring_cache
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     initialization-mode: always

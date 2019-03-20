@@ -18,4 +18,10 @@ public class EmployeeController {
         return employeeService.getEmp(id);
 
     }
+
+    @GetMapping("/emp")
+    public Employee update(Employee employee){
+        Employee emp = employeeService.updateEmp(employee);
+        return emp;
+    }
 }
