@@ -1,6 +1,8 @@
 package com.mzyan.elastic;
 
 import com.mzyan.elastic.bean.Article;
+import com.mzyan.elastic.bean.Book;
+import com.mzyan.elastic.repository.BookRepository;
 import io.searchbox.client.JestClient;
 import io.searchbox.core.Index;
 import io.searchbox.core.Search;
@@ -19,6 +21,20 @@ public class SpringBoot11ElasticApplicationTests {
 
     @Autowired
     JestClient jestClient;
+
+    @Autowired
+    BookRepository bookRepository;
+
+    @Test
+    public void test(){
+        Book book = new Book();
+        book.setId(1);
+        book.setBookName("西游记");
+        book.setAuthor("吴承恩");
+        bookRepository.index(book);
+    }
+
+
 
     @Test
     public void contextLoads(){
