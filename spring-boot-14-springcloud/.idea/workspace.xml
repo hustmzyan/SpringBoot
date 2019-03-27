@@ -1,50 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a4bfec8f-3cfa-4f61-a8ef-efa1fc4eabbb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/src/main/java/com/mzyan/consumeruser/ConsumerUserApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/src/main/java/com/mzyan/consumeruser/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/consumer-user/src/test/java/com/mzyan/consumeruser/ConsumerUserApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/java/com/mzyan/eurekaserver/EurekaServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eureka-server/src/test/java/com/mzyan/eurekaserver/EurekaServerApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/src/main/java/com/mzyan/providerticket/ProviderTicketApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/src/main/java/com/mzyan/providerticket/controller/TicketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/src/main/java/com/mzyan/providerticket/service/TicketService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/provider-ticket/src/test/java/com/mzyan/providerticket/ProviderTicketApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spring-boot-14-dubbo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../spring-boot-14-dubbo/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="a4bfec8f-3cfa-4f61-a8ef-efa1fc4eabbb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/eureka-server/target/" />
     <ignored path="$PROJECT_DIR$/provider-ticket/target/" />
     <ignored path="$PROJECT_DIR$/consumer-user/target/" />
@@ -68,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/consumer-user/src/main/java/com/mzyan/consumeruser/ConsumerUserApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="270">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="e#537#538#0" expanded="true" />
                 <element signature="e#561#562#0" expanded="true" />
@@ -273,12 +230,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1553689102024</updated>
-      <workItem from="1553689103235" duration="3306000" />
+      <workItem from="1553689103235" duration="3726000" />
     </task>
+    <task id="LOCAL-00001" summary="创建新工程，整合springcloud；&#10;实现了生产者、消费者，采用eureka实现；&#10;负载均衡；">
+      <created>1553693204230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553693204230</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3306000" />
+    <option name="totallyTimeSpent" value="3726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="826" extended-state="0" />
@@ -288,7 +253,7 @@
       <window_info id="Designer" />
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24964234" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" />
@@ -317,6 +282,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="创建新工程，整合springcloud；&#10;实现了生产者、消费者，采用eureka实现；&#10;负载均衡；" />
+    <option name="LAST_COMMIT_MESSAGE" value="创建新工程，整合springcloud；&#10;实现了生产者、消费者，采用eureka实现；&#10;负载均衡；" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/eureka-server/pom.xml">
@@ -389,8 +358,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/consumer-user/src/main/java/com/mzyan/consumeruser/ConsumerUserApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="270">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="e#537#538#0" expanded="true" />
             <element signature="e#561#562#0" expanded="true" />
